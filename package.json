@@ -15,7 +15,8 @@
     "express-jwt": "^7.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "openai": "^3.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

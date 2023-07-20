@@ -22,6 +22,9 @@ app.use("/api", isAuthenticated, taskRouter);
 const authRouter = require("./routes/auth.routes");
 app.use("/auth", authRouter);
 
+const apiRouter = require("./routes/api.routes");
+app.use("/api", allRoutes);
+
 require("./error-handling")(app);
 
 module.exports = app;

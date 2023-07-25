@@ -30,7 +30,7 @@ const therapistAuthRouter = require("./routes/therapistAuth.routes");
 app.use("/therapist", therapistAuthRouter);
 
 const therapistRouter = require("./routes/therapist.routes");
-app.use("/therapist", isAuthenticated, therapistRouter)
+app.use("/therapist", therapistRouter)
 
 const GPTRouter = require("./routes/gpt.routes");
 app.use("/ai-therapist", GPTRouter);

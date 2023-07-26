@@ -12,6 +12,7 @@ const therapistSchema = new Schema({
   approach: [{ type: String, required: true }],
   specialization: [{ type: String, required: true }],
   availability: [{ type: String, required: true }],
+  imageUrl: { type: String },
   appointments: [{ type: Schema.Types.ObjectId, ref: "Appointment" }]
 });
 

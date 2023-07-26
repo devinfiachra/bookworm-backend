@@ -26,11 +26,14 @@ app.use("/api", isAuthenticated, taskRouter);
 const userAuthRouter = require("./routes/userAuth.routes");
 app.use("/auth", userAuthRouter);
 
+const userRouter = require("./routes/user.routes");
+app.use("/user", isAuthenticated, userRouter);
+
 const therapistAuthRouter = require("./routes/therapistAuth.routes");
 app.use("/therapist", therapistAuthRouter);
 
 const therapistRouter = require("./routes/therapist.routes");
-app.use("/therapist", isAuthenticated, therapistRouter)
+app.use("/therapist", therapistRouter)
 
 const GPTRouter = require("./routes/gpt.routes");
 app.use("/ai-therapist", GPTRouter);

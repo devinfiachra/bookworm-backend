@@ -29,6 +29,9 @@ app.use("/auth", userAuthRouter);
 const userRouter = require("./routes/user.routes");
 app.use("/user", isAuthenticated, userRouter);
 
+const checkInRouter = require("./routes/checkIn.routes");
+app.use("/checkIn", isAuthenticated, checkInRouter);
+
 const therapistAuthRouter = require("./routes/therapistAuth.routes");
 app.use("/therapist", therapistAuthRouter);
 

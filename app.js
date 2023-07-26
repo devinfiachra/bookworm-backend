@@ -26,6 +26,9 @@ app.use("/api", isAuthenticated, taskRouter);
 const userAuthRouter = require("./routes/userAuth.routes");
 app.use("/auth", userAuthRouter);
 
+const userRouter = require("./routes/user.routes");
+app.use("/user", isAuthenticated, userRouter);
+
 const therapistAuthRouter = require("./routes/therapistAuth.routes");
 app.use("/therapist", therapistAuthRouter);
 

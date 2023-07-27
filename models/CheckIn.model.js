@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const CheckInSchema = new Schema({
-    mood: { type: String },
+    mood: { type: Number },
     imageUrl: { type: String},
     audioUrl: { type: String },
     diaryText: [{ type: String }],

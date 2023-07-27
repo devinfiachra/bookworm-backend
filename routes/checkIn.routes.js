@@ -50,7 +50,7 @@ router.post("/updateCheckIn", authenticateToken, async (req, res, next) => {
     const { mood, imageUrl, audioUrl, diaryText } = req.body;
     
     const checkInId = req.user.checkInId;
-    console.log(checkInId);
+    console.log(req.user)
     console.log(req.body);
     
     if (!mongoose.Types.ObjectId.isValid(checkInId)) {

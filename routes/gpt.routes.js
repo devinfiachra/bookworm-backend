@@ -1,10 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
+const fetch = require("node-fetch");
 const dotenv = require("dotenv");
 dotenv.config();
 
 const chatAPIKey = process.env.OPENAI_API_KEY;
+
+router.use(express.json());
 
 router.post("/completions", async (req, res, next) => {
     const options = {
@@ -33,7 +36,7 @@ router.post("/completions", async (req, res, next) => {
     const data = await response.json();
     res.send(data);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 });
 
